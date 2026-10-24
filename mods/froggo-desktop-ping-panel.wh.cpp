@@ -13,7 +13,15 @@
 /*
 # Froggo Desktop Ping Panel
 
-![Running desktop widget](https://raw.githubusercontent.com/SapitoSucio/windhawk-mods/d3ffc73d36d4672b5a679b0c61a1ac7845b78690/media/froggo-desktop-ping-panel/screenshot.png)
+![Running desktop widget](https://raw.githubusercontent.com/SapitoSucio/windhawk-mods/88faf004862364e9d831ae9bdb3864d76efc23bb/media/froggo-desktop-ping-panel/idle.png)
+
+![Hovering a row shows the destination name](https://raw.githubusercontent.com/SapitoSucio/windhawk-mods/88faf004862364e9d831ae9bdb3864d76efc23bb/media/froggo-desktop-ping-panel/hover.png)
+
+Real desktop captures, enlarged 3x. The second one hovers the first row.
+Capturas reales del escritorio, ampliadas 3x. La segunda pasa el cursor sobre
+la primera fila.
+
+## English
 
 A compact desktop widget inspired by the Rainmeter Ping skin.
 
@@ -33,17 +41,42 @@ The mod supports:
 - Optional click-through mode. Hold Ctrl to interact temporarily.
 - Transparent or styled backgrounds, borders, typography, and spacing.
 
-## Installation
-
-Create a new mod in Windhawk, replace the editor contents with this file,
-compile it, and exit editing mode.
-
-## Notes
+### Notes
 
 - TCP latency measures the time needed to establish a TCP connection. It is not
   identical to ICMP latency, but it is useful when a host blocks ICMP.
 - Values lower than 250 ms for the update interval are clamped to 250 ms.
 - DNS resolution uses the Windows resolver and is refreshed periodically.
+
+---
+
+## Español
+
+Un widget compacto de escritorio inspirado en el skin Ping de Rainmeter.
+
+Cada fila activa muestra la latencia alineada a la derecha y un punto de color
+con el estado. Al pasar el cursor sobre una fila, la latencia se reemplaza por
+el nombre del destino.
+
+El mod permite:
+
+- Hasta 10 destinos.
+- IPv4, IPv6 y nombres de host.
+- ICMP primero, con respaldo por TCP cuando ICMP falla.
+- Valores globales con ajustes por destino.
+- Modo anclado al escritorio por defecto, o siempre visible encima.
+- Ocultarse sobre apps a pantalla completa en el modo siempre visible.
+- Arrastrarlo, guardando la posición en varios monitores, con bloqueo opcional.
+- Arrastrar con Ctrl aunque la posición esté bloqueada (opcional).
+- Modo opcional que deja pasar los clics. Mantén Ctrl para interactuar.
+- Fondos transparentes o con estilo, bordes, tipografía y espaciado.
+
+### Notas
+
+- La latencia TCP mide el tiempo para establecer una conexión TCP. No es igual
+  a la latencia ICMP, pero sirve cuando un host bloquea ICMP.
+- Los intervalos menores a 250 ms se ajustan a 250 ms.
+- La resolución DNS usa el resolvedor de Windows y se refresca periódicamente.
 */
 // ==/WindhawkModReadme==
 
