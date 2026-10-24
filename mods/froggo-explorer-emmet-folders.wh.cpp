@@ -14,6 +14,12 @@
 /*
 # Froggo Explorer Emmet Folders
 
+![Recorded expansion in a dummy folder](https://raw.githubusercontent.com/SapitoSucio/windhawk-mods/d3ffc73d36d4672b5a679b0c61a1ac7845b78690/media/froggo-explorer-emmet-folders/demo.gif)
+
+[Watch or download the demo video](https://github.com/SapitoSucio/windhawk-mods/blob/d3ffc73d36d4672b5a679b0c61a1ac7845b78690/media/froggo-explorer-emmet-folders/demo.mp4).
+The recording uses a dedicated dummy folder, with personal tabs and navigation
+locations excluded from the capture.
+
 Type compact expressions while renaming a folder in File Explorer:
 
 - `Temporada {1..8}`
