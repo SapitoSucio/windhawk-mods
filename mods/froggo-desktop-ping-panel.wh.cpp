@@ -13,6 +13,8 @@
 /*
 # Froggo Desktop Ping Panel
 
+![Running desktop widget](https://raw.githubusercontent.com/SapitoSucio/windhawk-mods/d3ffc73d36d4672b5a679b0c61a1ac7845b78690/media/froggo-desktop-ping-panel/screenshot.png)
+
 A compact desktop widget inspired by the Rainmeter Ping skin.
 
 Each enabled row normally displays a right-aligned latency value and a colored
