@@ -15,6 +15,15 @@
 /*
 # Froggo Toast Tamer
 
+![Real banner with the mod running](https://raw.githubusercontent.com/SapitoSucio/windhawk-mods/88faf004862364e9d831ae9bdb3864d76efc23bb/media/froggo-toast-tamer/banner.png)
+
+![How click-through works (illustration)](https://raw.githubusercontent.com/SapitoSucio/windhawk-mods/88faf004862364e9d831ae9bdb3864d76efc23bb/media/froggo-toast-tamer/illustration.png)
+
+The first image is a real capture; the second is a drawn illustration.
+La primera imagen es una captura real; la segunda es una ilustración.
+
+## English
+
 Windows 11 toast windows are larger than the visible notification card. The
 transparent part can consequently swallow clicks intended for the application
 underneath. Froggo Toast Tamer removes hit-test backgrounds from the empty XAML
@@ -27,6 +36,23 @@ literal executable filename. Snoozing only hides popup banners; notifications
 remain available in Notification Center.
 
 The mod supports Windows 11 only.
+
+---
+
+## Español
+
+Las ventanas de notificación de Windows 11 son más grandes que la tarjeta
+visible. Esa parte transparente puede quedarse con los clics destinados a la
+aplicación de abajo. Froggo Toast Tamer quita el fondo de detección de clics de
+los contenedores XAML vacíos y deja la notificación interactiva.
+
+Opcionalmente, deslizar una notificación hacia el costado silencia los
+siguientes banners del mismo remitente por un tiempo configurable. Windows
+identifica al remitente por el nombre de la app o su AUMID, que no siempre
+coincide con el nombre del ejecutable. El silencio solo oculta los banners; las
+notificaciones siguen disponibles en el Centro de notificaciones.
+
+El mod solo es compatible con Windows 11.
 */
 // ==/WindhawkModReadme==
 
