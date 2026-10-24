@@ -2,7 +2,7 @@
 // @id              froggo-explorer-emmet-folders
 // @name            Froggo Explorer Emmet Folders
 // @description     Create folder trees from Emmet-like expressions typed in File Explorer's native rename editor.
-// @version         1.0.4
+// @version         1.0.5
 // @author          Sapito Sucio
 // @github          https://github.com/SapitoSucio
 // @include         explorer.exe
@@ -14,24 +14,57 @@
 /*
 # Froggo Explorer Emmet Folders
 
-![Recorded expansion in a dummy folder](https://raw.githubusercontent.com/SapitoSucio/windhawk-mods/d3ffc73d36d4672b5a679b0c61a1ac7845b78690/media/froggo-explorer-emmet-folders/demo.gif)
+![Recorded expansion in a dummy folder](https://raw.githubusercontent.com/SapitoSucio/windhawk-mods/88faf004862364e9d831ae9bdb3864d76efc23bb/media/froggo-explorer-emmet-folders/demo.gif)
 
-[Watch or download the demo video](https://github.com/SapitoSucio/windhawk-mods/blob/d3ffc73d36d4672b5a679b0c61a1ac7845b78690/media/froggo-explorer-emmet-folders/demo.mp4).
-The recording uses a dedicated dummy folder, with personal tabs and navigation
-locations excluded from the capture.
+[Watch or download the demo video](https://github.com/SapitoSucio/windhawk-mods/blob/88faf004862364e9d831ae9bdb3864d76efc23bb/media/froggo-explorer-emmet-folders/demo.mp4).
+The recording types `Project {1..3}/Assets+Exports` in a dummy folder and then
+opens `Project 1` by hand to show its children.
+
+## English
 
 Type compact expressions while renaming a folder in File Explorer:
+
+- `Season {1..8}`
+- `Show/Season {1..3}/Episodes+Extras+Specials`
+- `Anime {1..2}/Season {1..3}+Movies+OVAs`
+
+`{a..b}` repeats a name with a number range, `/` nests a level and `+` adds
+siblings. The original folder becomes the first missing top-level result and
+keeps all of its contents. Existing directories are reused without merging or
+overwriting. Explorer stays in the folder where you started the rename.
+
+A confirmation appears when more than **Preview threshold** directories would
+be affected. The completion message is off by default and can be enabled in
+the settings.
+
+Version 1.0.5 keeps Explorer in the original folder instead of jumping to the
+last created one. Version 1.0.4 represents typed `/` with a Windows-valid
+visual separator while editing, avoiding Explorer's illegal-character dialog.
+
+---
+
+## Español
+
+Escribe expresiones compactas mientras renombras una carpeta en el Explorador:
 
 - `Temporada {1..8}`
 - `Serie/Temporada {1..3}/Capítulos+Extras+Especiales`
 - `Anime {1..2}/Temporada {1..3}+Películas+OVAs`
 
-The original folder becomes the first missing top-level result and keeps all of
-its contents. Existing directories are reused without merging or overwriting.
+`{a..b}` repite un nombre con un rango numérico, `/` crea un nivel anidado y
+`+` agrega carpetas hermanas. La carpeta original se convierte en el primer
+resultado de nivel superior que falte y conserva todo su contenido. Las
+carpetas existentes se reutilizan sin fusionar ni sobrescribir nada. El
+Explorador permanece en la carpeta donde empezaste a renombrar.
 
-Version 1.0.4 removes per-keystroke text recapture and represents typed `/`
-with a Windows-valid visual separator while editing. The parser normalizes it
-back to `/`, avoiding rename flicker and Explorer's illegal-character dialog.
+Si se afectarían más carpetas que el **Preview threshold**, se pide
+confirmación. El mensaje de finalización está desactivado por defecto y se
+puede activar en la configuración.
+
+La versión 1.0.5 mantiene el Explorador en la carpeta original en lugar de
+saltar a la última carpeta creada. La versión 1.0.4 representa la `/` escrita
+con un separador visual válido en Windows, evitando el aviso de caracteres no
+permitidos del Explorador.
 */
 // ==/WindhawkModReadme==
 
@@ -2263,10 +2296,13 @@ void ProcessRenameRequest(const RenameRequest& request) {
         return;
     }
 
+    // Shell operations owned by the Explorer window select their results, and
+    // for nested items Explorer navigates into the last created folder. Run
+    // them unowned so the window stays in the folder where the rename began.
     std::size_t completedOperations = 0;
     if (!plan.sourceStaysInPlace) {
         OperationResult renameResult = RenameDirectoryWithShell(
-            plan.sourcePath, plan.sourceTargetPath, request.owner);
+            plan.sourcePath, plan.sourceTargetPath, nullptr);
         if (!renameResult.ok) {
             ShowError(request.owner, L"Froggo Explorer Emmet Folders",
                       FormatOperationFailure(plan.sourceTargetPath,
@@ -2283,7 +2319,7 @@ void ProcessRenameRequest(const RenameRequest& request) {
         }
 
         OperationResult createResult =
-            CreateDirectoryWithShell(directory.absolutePath, request.owner);
+            CreateDirectoryWithShell(directory.absolutePath, nullptr);
         if (!createResult.ok) {
             SHChangeNotify(SHCNE_UPDATEDIR, SHCNF_PATH,
                            parentPath.c_str(), nullptr);
@@ -2478,7 +2514,7 @@ BOOL Wh_ModInit() {
         return FALSE;
     }
 
-    Wh_Log(L"Froggo Explorer Emmet Folders 1.0.4 initialized.");
+    Wh_Log(L"Froggo Explorer Emmet Folders 1.0.5 initialized.");
     return TRUE;
 }
 
