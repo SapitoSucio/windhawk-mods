@@ -5,9 +5,14 @@ separate branch so each Windhawk submission still changes only its mod source.
 
 ## Froggo Desktop Ping Panel
 
-![Running Ping Panel](froggo-desktop-ping-panel/screenshot.png)
+![Running Ping Panel](froggo-desktop-ping-panel/idle.png)
+
+![Hovering the first row shows its destination name](froggo-desktop-ping-panel/hover.png)
 
 The compact running widget displays four latency readings and status indicators.
+Hovering a row replaces its latency with the destination name. Both captures are
+3x upscales of the real desktop corner; `screenshot.png` is the original
+unscaled crop.
 
 ## Froggo Explorer Emmet Folders
 
@@ -39,9 +44,11 @@ pinned folders, and unrelated locations are not included.
 
 ## Froggo Toast Tamer
 
-No visual evidence is included yet. Dummy notifications sent through WinRT and
-the system tray did not produce a visible banner in this session. A screenshot
-of an absent banner would not demonstrate click-through or swipe snoozing.
+![Toast Tamer behavior illustration](froggo-toast-tamer/illustration.png)
+
+This is a drawn illustration, not a capture. Dummy notifications sent through
+WinRT did not produce a visible banner because notifications were silenced on
+the recording machine.
 
 ## Runtime provenance
 
