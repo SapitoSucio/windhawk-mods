@@ -15,6 +15,20 @@
 /*
 # Froggo Explorer Mixed Sorting
 
+## Demonstration
+
+The same dummy folder, sorted by Date modified (descending), with Group by: None.
+
+**Before: mixed sorting off**
+
+![Files and folders remain separate](https://raw.githubusercontent.com/SapitoSucio/windhawk-mods/d3ffc73d36d4672b5a679b0c61a1ac7845b78690/media/froggo-explorer-mixed-sorting/before.png)
+
+**After: mixed sorting on**
+
+![Files and folders interleave by date](https://raw.githubusercontent.com/SapitoSucio/windhawk-mods/d3ffc73d36d4672b5a679b0c61a1ac7845b78690/media/froggo-explorer-mixed-sorting/after.png)
+
+The captures exclude personal tabs and navigation locations.
+
 ## English
 
 Windows Explorer normally gives folders special placement while sorting.
