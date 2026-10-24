@@ -44,11 +44,14 @@ pinned folders, and unrelated locations are not included.
 
 ## Froggo Toast Tamer
 
+![Real banner with the mod running](froggo-toast-tamer/banner.png)
+
+A dummy WinRT notification captured with the mod loaded. A still image cannot
+show click-through, so the behavior is also explained with a drawing:
+
 ![Toast Tamer behavior illustration](froggo-toast-tamer/illustration.png)
 
-This is a drawn illustration, not a capture. Dummy notifications sent through
-WinRT did not produce a visible banner because notifications were silenced on
-the recording machine.
+The second image is a drawn illustration, not a capture.
 
 ## Runtime provenance
 
