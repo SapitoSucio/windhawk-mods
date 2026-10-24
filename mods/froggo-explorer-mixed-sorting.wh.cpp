@@ -15,19 +15,19 @@
 /*
 # Froggo Explorer Mixed Sorting
 
-## Demonstration
+## Demonstration / Demostración
 
 The same dummy folder, sorted by Date modified (descending), with Group by: None.
+La misma carpeta de prueba, ordenada por Fecha de modificación (descendente),
+con Agrupar por: Ninguno.
 
-**Before: mixed sorting off**
+**Off / Desactivado**
 
-![Files and folders remain separate](https://raw.githubusercontent.com/SapitoSucio/windhawk-mods/d3ffc73d36d4672b5a679b0c61a1ac7845b78690/media/froggo-explorer-mixed-sorting/before.png)
+![Files and folders remain separate](https://raw.githubusercontent.com/SapitoSucio/windhawk-mods/88faf004862364e9d831ae9bdb3864d76efc23bb/media/froggo-explorer-mixed-sorting/before.png)
 
-**After: mixed sorting on**
+**On / Activado**
 
-![Files and folders interleave by date](https://raw.githubusercontent.com/SapitoSucio/windhawk-mods/d3ffc73d36d4672b5a679b0c61a1ac7845b78690/media/froggo-explorer-mixed-sorting/after.png)
-
-The captures exclude personal tabs and navigation locations.
+![Files and folders interleave by date](https://raw.githubusercontent.com/SapitoSucio/windhawk-mods/88faf004862364e9d831ae9bdb3864d76efc23bb/media/froggo-explorer-mixed-sorting/after.png)
 
 ## English
 
