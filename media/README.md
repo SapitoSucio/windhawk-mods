@@ -46,7 +46,8 @@ of an absent banner would not demonstrate click-through or swipe snoozing.
 ## Runtime provenance
 
 The recordings use the existing installed mods. Their saved sources match the
-submitted sources apart from Froggo naming and the GitHub author metadata.
+submitted sources apart from Froggo naming, GitHub author metadata, and the
+demonstration links added to the submitted documentation.
 The installed Ping Panel and Emmet IDs still use their original names;
 recording these demonstrations did not install the renamed mods. This source
 comparison does not independently establish how the loaded DLLs were built.
